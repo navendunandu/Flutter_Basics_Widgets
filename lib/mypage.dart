@@ -8,26 +8,23 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) => ViewMe(),));
-          },
-          child: Container(
-            height: 100,
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(10)
-            ),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Text("Name: Hari"),
-              Text("Click to View Photo")
-            ],)
+        child: Container(
+          height: 100,
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.amber,
+            borderRadius: BorderRadius.circular(10)
           ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            const Text("Name: Hari"),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+              builder: (context) => const ViewMe(),));
+              }, child: const Text("Click To View Photo"))
+          ],)
         ),
       ),
     );
