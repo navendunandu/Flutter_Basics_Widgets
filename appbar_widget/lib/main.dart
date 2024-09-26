@@ -1,6 +1,5 @@
-
+import 'package:appbar_widget/main_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_basic_widgets/main_page.dart';
 
 void main() {
   runApp(const MainApp());
